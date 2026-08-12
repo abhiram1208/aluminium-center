@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-hairline;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #060606;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-ink text-cream font-sans antialiased;
+    font-feature-settings: "ss01" 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif font-normal;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: #C9A876;
+    color: #060606;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 1.5px solid #C9A876;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-widest2 text-champagne font-sans font-medium;
+  }
+
+  .section-pad {
+    @apply px-6 sm:px-10 lg:px-16 xl:px-24;
+  }
+
+  .hairline-rule {
+    @apply w-full border-t border-hairline;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-champagne text-ink px-7 py-3.5 text-[13px] uppercase tracking-[0.12em] font-medium transition-all duration-500 ease-cinematic hover:bg-cream;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-cream/25 text-cream px-7 py-3.5 text-[13px] uppercase tracking-[0.12em] font-medium transition-all duration-500 ease-cinematic hover:border-champagne hover:text-champagne;
+  }
+
+  .field {
+    @apply w-full bg-transparent border-b border-cream/20 py-3 text-cream placeholder:text-cream-40 focus:border-champagne outline-none transition-colors duration-300;
+  }
+}
+
+/* Custom scrollbar - subtle, premium */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+::-webkit-scrollbar-thumb {
+  background: #232323;
+  border: 2px solid #060606;
+}
