@@ -7,7 +7,8 @@ import { categories, projects } from "../data/projects.js";
 export default function Works() {
   const [active, setActive] = useState("All");
 
-  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
+  const filtered =
+    active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
     <section id="works" className="section-pad py-28 lg:py-36">
@@ -21,7 +22,9 @@ export default function Works() {
                 key={cat}
                 onClick={() => setActive(cat)}
                 className={`text-[12px] uppercase tracking-[0.1em] transition-colors duration-300 ${
-                  active === cat ? "text-champagne" : "text-cream-40 hover:text-cream-60"
+                  active === cat
+                    ? "text-champagne"
+                    : "text-cream-40 hover:text-cream-60"
                 }`}
               >
                 {cat}
@@ -30,7 +33,10 @@ export default function Works() {
           </div>
         </div>
 
-        <motion.div layout className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          layout
+          className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
               <motion.article
@@ -51,12 +57,20 @@ export default function Works() {
                 />
                 <div className="mt-5 flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-serif text-lg text-cream">{project.title}</h3>
-                    <p className="mt-1 text-sm text-cream-40">{project.location}</p>
+                    <h3 className="font-serif text-lg text-cream">
+                      {project.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-cream-40">
+                      {project.location}
+                    </p>
                   </div>
-                  <span className="eyebrow whitespace-nowrap pt-1">{project.category}</span>
+                  <span className="eyebrow whitespace-nowrap pt-1">
+                    {project.category}
+                  </span>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-cream-60">{project.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-cream-60">
+                  {project.description}
+                </p>
               </motion.article>
             ))}
           </AnimatePresence>

@@ -3,7 +3,8 @@ import { MapPin, Phone, Mail, Clock, ArrowUpRight } from "lucide-react";
 import { business } from "../data/siteData.js";
 
 export default function Location() {
-  const hasMap = business.googleMapsEmbedUrl && !business.googleMapsEmbedUrl.startsWith("[");
+  const hasMap =
+    business.googleMapsEmbedUrl && !business.googleMapsEmbedUrl.startsWith("[");
 
   return (
     <section className="bg-surface py-28 lg:py-36">
@@ -24,30 +25,47 @@ export default function Location() {
             <div className="flex gap-4">
               <MapPin size={18} className="mt-1 shrink-0 text-champagne" />
               <div>
-                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">Address</p>
-                <p className="mt-1 text-sm leading-relaxed text-cream-60">{business.address}</p>
+                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">
+                  Address
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-cream-60">
+                  {business.address}
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Phone size={18} className="mt-1 shrink-0 text-champagne" />
               <div>
-                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">Phone</p>
-                <p className="mt-1 text-sm leading-relaxed text-cream-60">{business.phone}</p>
+                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">
+                  Phone
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-cream-60">
+                  {business.phone}
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Mail size={18} className="mt-1 shrink-0 text-champagne" />
               <div>
-                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">Email</p>
-                <p className="mt-1 text-sm leading-relaxed text-cream-60">{business.email}</p>
+                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">
+                  Email
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-cream-60">
+                  {business.email}
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Clock size={18} className="mt-1 shrink-0 text-champagne" />
               <div>
-                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">Hours</p>
+                <p className="text-xs uppercase tracking-[0.1em] text-cream-40">
+                  Hours
+                </p>
                 {business.hours.map((h) => (
-                  <p key={h.day} className="mt-1 text-sm leading-relaxed text-cream-60">
+                  <p
+                    key={h.day}
+                    className="mt-1 text-sm leading-relaxed text-cream-60"
+                  >
                     {h.day}: {h.time}
                   </p>
                 ))}
@@ -55,7 +73,11 @@ export default function Location() {
             </div>
 
             <a
-              href={business.googleMapsDirectionsUrl.startsWith("[") ? "#" : business.googleMapsDirectionsUrl}
+              href={
+                business.googleMapsDirectionsUrl.startsWith("[")
+                  ? "#"
+                  : business.googleMapsDirectionsUrl
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost mt-2 self-start"

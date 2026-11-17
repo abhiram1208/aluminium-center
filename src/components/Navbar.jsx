@@ -28,11 +28,17 @@ export default function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-cinematic ${
-          scrolled ? "bg-ink/85 backdrop-blur-md border-b border-hairline" : "bg-transparent border-b border-transparent"
+          scrolled
+            ? "bg-ink/85 backdrop-blur-md border-b border-hairline"
+            : "bg-transparent border-b border-transparent"
         }`}
       >
         <nav className="section-pad flex h-[76px] items-center justify-between">
-          <a href="#top" className="text-cream" aria-label="Aluminium Center home">
+          <a
+            href="#top"
+            className="text-cream"
+            aria-label="Aluminium Center home"
+          >
             <Logo />
           </a>
 
@@ -49,7 +55,10 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href="#contact" className="hidden lg:inline-flex btn-ghost !py-2.5 !px-5 text-[11px]">
+          <a
+            href="#contact"
+            className="hidden lg:inline-flex btn-ghost !py-2.5 !px-5 text-[11px]"
+          >
             Get a Quote
           </a>
 
@@ -78,7 +87,11 @@ export default function Navbar() {
             <motion.ul
               initial="hidden"
               animate="show"
-              variants={{ show: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } } }}
+              variants={{
+                show: {
+                  transition: { staggerChildren: 0.06, delayChildren: 0.1 },
+                },
+              }}
               className="flex flex-1 flex-col justify-center gap-2 section-pad"
             >
               {navLinks.map((link) => (
@@ -86,7 +99,11 @@ export default function Navbar() {
                   key={link.href}
                   variants={{
                     hidden: { opacity: 0, y: 16 },
-                    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                    },
                   }}
                 >
                   <a
@@ -101,11 +118,19 @@ export default function Navbar() {
               <motion.li
                 variants={{
                   hidden: { opacity: 0, y: 16 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                  },
                 }}
                 className="pt-6"
               >
-                <a href="#contact" onClick={handleLinkClick} className="btn-primary">
+                <a
+                  href="#contact"
+                  onClick={handleLinkClick}
+                  className="btn-primary"
+                >
                   Get a Quote
                 </a>
               </motion.li>

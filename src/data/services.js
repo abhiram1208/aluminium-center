@@ -11,14 +11,16 @@ export const services = [
   {
     id: "kitchens",
     title: "Modular Kitchens",
-    description: "Modern kitchens combining clean design with practical organization.",
+    description:
+      "Modern kitchens combining clean design with practical organization.",
     image: images.services.kitchens,
     alt: "Modern custom aluminium kitchen with integrated storage",
   },
   {
     id: "cabinets",
     title: "Aluminium Cabinets",
-    description: "Custom cabinets for bedrooms, kitchens, offices, and utility spaces.",
+    description:
+      "Custom cabinets for bedrooms, kitchens, offices, and utility spaces.",
     image: images.services.cabinets,
     alt: "Minimal contemporary aluminium storage cabinet",
   },
@@ -32,14 +34,16 @@ export const services = [
   {
     id: "partitions",
     title: "Aluminium Partitions",
-    description: "Elegant space-dividing solutions that maintain openness and light.",
+    description:
+      "Elegant space-dividing solutions that maintain openness and light.",
     image: images.services.partitions,
     alt: "Elegant aluminium-framed interior partition",
   },
   {
     id: "doors-windows",
     title: "Doors & Windows",
-    description: "Modern aluminium doors and windows with clean architectural profiles.",
+    description:
+      "Modern aluminium doors and windows with clean architectural profiles.",
     image: images.services.doorsWindows,
     alt: "Modern architectural aluminium doors and windows",
   },
@@ -53,13 +57,16 @@ export const services = [
   {
     id: "sliding-doors",
     title: "Sliding Doors",
-    description: "Space-saving sliding doors with smooth operation and modern aesthetics.",
+    description:
+      "Space-saving sliding doors with smooth operation and modern aesthetics.",
     image: images.services.slidingDoors,
     alt: "Contemporary aluminium sliding door in a modern interior",
   },
-  {id: "custom-interiors",
+  {
+    id: "custom-interiors",
     title: "Custom Interiors",
-    description: "Tailored interior solutions designed to meet your specific needs.",
+    description:
+      "Tailored interior solutions designed to meet your specific needs.",
     image: images.services.customInteriors,
     alt: "Sophisticated custom aluminium interior solution",
   },

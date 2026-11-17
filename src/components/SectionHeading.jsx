@@ -7,7 +7,10 @@ export default function SectionHeading({
   align = "left",
   size = "lg",
 }) {
-  const alignClass = align === "center" ? "items-center text-center mx-auto" : "items-start text-left";
+  const alignClass =
+    align === "center"
+      ? "items-center text-center mx-auto"
+      : "items-start text-left";
   const sizeClass =
     size === "xl"
       ? "text-[clamp(2.2rem,5vw,4.2rem)]"
@@ -23,7 +26,11 @@ export default function SectionHeading({
     >
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
       <h2 className={`${sizeClass} leading-[1.08] text-cream`}>{title}</h2>
-      {body && <p className="text-cream-60 text-[15px] sm:text-base leading-relaxed max-w-xl">{body}</p>}
+      {body && (
+        <p className="text-cream-60 text-[15px] sm:text-base leading-relaxed max-w-xl">
+          {body}
+        </p>
+      )}
     </motion.div>
   );
 }

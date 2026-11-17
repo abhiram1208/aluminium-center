@@ -1,10 +1,6 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Loader2,
-  CheckCircle2,
-  AlertCircle,
-} from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 import SmartImage from "./SmartImage.jsx";
@@ -48,9 +44,7 @@ function validate(values) {
   // Email
   if (!values.email.trim()) {
     errors.email = "Please enter an email address.";
-  } else if (
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())
-  ) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
     errors.email = "Please enter a valid email address.";
   }
 
@@ -117,7 +111,7 @@ export default function Contact() {
         formRef.current,
         {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        }
+        },
       );
 
       setStatus("success");
@@ -130,12 +124,8 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="section-pad py-28 lg:py-36"
-    >
+    <section id="contact" className="section-pad py-28 lg:py-36">
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-10">
-
         {/* =========================================
             LEFT SIDE
         ========================================== */}
@@ -160,17 +150,15 @@ export default function Contact() {
             }}
             className="flex flex-col gap-6"
           >
-            <span className="eyebrow">
-              Contact
-            </span>
+            <span className="eyebrow">Contact</span>
 
             <h2 className="text-[clamp(2rem,3.6vw,3.2rem)] leading-[1.1] text-cream">
               Let's build your space.
             </h2>
 
             <p className="max-w-md text-[15px] leading-relaxed text-cream-60">
-              Tell us what you have in mind and we'll help
-              turn your ideas into a practical custom solution.
+              Tell us what you have in mind and we'll help turn your ideas into
+              a practical custom solution.
             </p>
 
             {/* Contact Image */}
@@ -211,13 +199,11 @@ export default function Contact() {
             }}
             className="flex flex-col gap-8"
           >
-
             {/* =====================================
                 NAME / PHONE
             ====================================== */}
 
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-
               {/* NAME */}
               <div>
                 <label
@@ -235,18 +221,13 @@ export default function Contact() {
                   value={values.name}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.name)}
-                  aria-describedby={
-                    errors.name ? "name-error" : undefined
-                  }
+                  aria-describedby={errors.name ? "name-error" : undefined}
                   className="field"
                   placeholder="Your name"
                 />
 
                 {errors.name && (
-                  <p
-                    id="name-error"
-                    className="mt-2 text-xs text-red-400"
-                  >
+                  <p id="name-error" className="mt-2 text-xs text-red-400">
                     {errors.name}
                   </p>
                 )}
@@ -269,18 +250,13 @@ export default function Contact() {
                   value={values.phone}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.phone)}
-                  aria-describedby={
-                    errors.phone ? "phone-error" : undefined
-                  }
+                  aria-describedby={errors.phone ? "phone-error" : undefined}
                   className="field"
                   placeholder="Your phone number"
                 />
 
                 {errors.phone && (
-                  <p
-                    id="phone-error"
-                    className="mt-2 text-xs text-red-400"
-                  >
+                  <p id="phone-error" className="mt-2 text-xs text-red-400">
                     {errors.phone}
                   </p>
                 )}
@@ -306,18 +282,13 @@ export default function Contact() {
                   value={values.email}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.email)}
-                  aria-describedby={
-                    errors.email ? "email-error" : undefined
-                  }
+                  aria-describedby={errors.email ? "email-error" : undefined}
                   className="field"
                   placeholder="your@email.com"
                 />
 
                 {errors.email && (
-                  <p
-                    id="email-error"
-                    className="mt-2 text-xs text-red-400"
-                  >
+                  <p id="email-error" className="mt-2 text-xs text-red-400">
                     {errors.email}
                   </p>
                 )}
@@ -342,9 +313,7 @@ export default function Contact() {
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.projectType)}
                   aria-describedby={
-                    errors.projectType
-                      ? "projectType-error"
-                      : undefined
+                    errors.projectType ? "projectType-error" : undefined
                   }
                   className="field bg-ink"
                 >
@@ -353,10 +322,7 @@ export default function Contact() {
                   </option>
 
                   {projectTypes.map((type) => (
-                    <option
-                      key={type}
-                      value={type}
-                    >
+                    <option key={type} value={type}>
                       {type}
                     </option>
                   ))}
@@ -415,19 +381,14 @@ export default function Contact() {
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.message)}
                   aria-describedby={
-                    errors.message
-                      ? "message-error"
-                      : undefined
+                    errors.message ? "message-error" : undefined
                   }
                   className="field resize-none"
                   placeholder="Tell us about your project..."
                 />
 
                 {errors.message && (
-                  <p
-                    id="message-error"
-                    className="mt-2 text-xs text-red-400"
-                  >
+                  <p id="message-error" className="mt-2 text-xs text-red-400">
                     {errors.message}
                   </p>
                 )}
@@ -439,7 +400,6 @@ export default function Contact() {
             ====================================== */}
 
             <div className="flex flex-wrap items-center gap-5">
-
               <button
                 type="submit"
                 disabled={status === "loading"}
@@ -447,10 +407,7 @@ export default function Contact() {
               >
                 {status === "loading" ? (
                   <>
-                    <Loader2
-                      size={16}
-                      className="animate-spin"
-                    />
+                    <Loader2 size={16} className="animate-spin" />
                     Sending
                   </>
                 ) : (
@@ -472,7 +429,6 @@ export default function Contact() {
                   className="flex items-center gap-2 text-sm text-champagne"
                 >
                   <CheckCircle2 size={16} />
-
                   Thanks — we'll be in touch shortly.
                 </motion.span>
               )}
@@ -491,7 +447,6 @@ export default function Contact() {
                   className="flex items-center gap-2 text-sm text-red-400"
                 >
                   <AlertCircle size={16} />
-
                   Something went wrong. Please try again.
                 </motion.span>
               )}

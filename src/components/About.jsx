@@ -26,20 +26,25 @@ export default function About() {
               Built around better spaces.
             </h2>
             <p className="max-w-md text-[15px] leading-relaxed text-cream-60">
-              Aluminium Center is a modern custom aluminium interior and fabrication brand.
-              We design and build practical, contemporary, and carefully finished interior
-              solutions — wardrobes, kitchens, cabinets, partitions, doors, and windows —
-              shaped around the way each space is actually used.
+              Aluminium Center is a modern custom aluminium interior and
+              fabrication brand. We design and build practical, contemporary,
+              and carefully finished interior solutions — wardrobes, kitchens,
+              cabinets, partitions, doors, and windows — shaped around the way
+              each space is actually used.
             </p>
             <p className="max-w-md text-[15px] leading-relaxed text-cream-60">
-              From the first measurement to the final fitting, every project is treated as
-              its own piece of architecture: designed with intent, fabricated with
-              precision, and finished with attention to the smallest detail.
+              From the first measurement to the final fitting, every project is
+              treated as its own piece of architecture: designed with intent,
+              fabricated with precision, and finished with attention to the
+              smallest detail.
             </p>
 
             <ul className="mt-2 flex flex-col gap-4">
               {points.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-sm text-cream-60">
+                <li
+                  key={p}
+                  className="flex items-start gap-3 text-sm text-cream-60"
+                >
                   <span className="mt-2 h-px w-4 shrink-0 bg-champagne" />
                   {p}
                 </li>
@@ -70,7 +75,9 @@ export default function About() {
             />
             <div className="hidden aspect-[3/2] flex-col justify-between border border-hairline p-6 sm:col-span-1 sm:flex">
               <span className="eyebrow">Since 2026</span>
-              <span className="font-serif text-2xl text-cream">Precision, by hand and by design.</span>
+              <span className="font-serif text-2xl text-cream">
+                Precision, by hand and by design.
+              </span>
             </div>
           </motion.div>
         </div>

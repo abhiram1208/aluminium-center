@@ -59,8 +59,6 @@ export const images = {
     "/images/works/project-13.png",
     "/images/works/project-14.png",
     "/images/works/project-15.png",
-    
-    
   ],
 
   featured: "/images/featured/featured-project.webp",

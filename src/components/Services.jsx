@@ -20,7 +20,11 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: (i % 3) * 0.08 }}
+              transition={{
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+                delay: (i % 3) * 0.08,
+              }}
               className="group relative bg-ink"
             >
               <div className="relative overflow-hidden">
@@ -35,7 +39,9 @@ export default function Services() {
               </div>
               <div className="p-6">
                 <h3 className="font-serif text-xl text-cream">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream-60">{s.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-cream-60">
+                  {s.description}
+                </p>
               </div>
               <span className="pointer-events-none absolute left-6 top-6 h-px w-6 origin-left scale-x-0 bg-champagne transition-transform duration-500 ease-cinematic group-hover:scale-x-100" />
             </motion.article>

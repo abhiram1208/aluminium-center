@@ -1,7 +1,9 @@
 import Logo from "./Logo.jsx";
 import { business, navLinks } from "../data/siteData.js";
 
-const socialEntries = Object.entries(business.social).filter(([, url]) => url && url.trim() !== "");
+const socialEntries = Object.entries(business.social).filter(
+  ([, url]) => url && url.trim() !== "",
+);
 
 export default function Footer() {
   return (
@@ -9,7 +11,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-sm">
           <Logo />
-          <p className="mt-4 text-sm leading-relaxed text-cream-60">{business.tagline}</p>
+          <p className="mt-4 text-sm leading-relaxed text-cream-60">
+            {business.tagline}
+          </p>
         </div>
 
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
@@ -18,7 +22,10 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-sm text-cream-60 transition-colors hover:text-champagne">
+                  <a
+                    href={l.href}
+                    className="text-sm text-cream-60 transition-colors hover:text-champagne"
+                  >
                     {l.label}
                   </a>
                 </li>

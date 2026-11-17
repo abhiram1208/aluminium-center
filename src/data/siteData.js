@@ -21,12 +21,15 @@ export const business = {
     { day: "Sunday", time: "CLOSED" },
   ],
 
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7051.91837731852!2d75.920188!3d12.428938!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5a700360c1f89%3A0xe00eaae4a816dbb3!2sAluminium%20Center%20Kushalnagar!5e1!3m2!1sen!2sin!4v1786515867160!5m2!1sen!2sin",
-  googleMapsDirectionsUrl: "https://www.google.com/maps/dir//Aluminium+Center,+CWHC%2BH37,+Basavanahalli,+Karnataka+571234/@12.428938,75.920188,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba5a700360c1f89:0xe00eaae4a816dbb3!2m2!1d75.920188!2d12.428938",
+  googleMapsEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7051.91837731852!2d75.920188!3d12.428938!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5a700360c1f89%3A0xe00eaae4a816dbb3!2sAluminium%20Center%20Kushalnagar!5e1!3m2!1sen!2sin!4v1786515867160!5m2!1sen!2sin",
+  googleMapsDirectionsUrl:
+    "https://www.google.com/maps/dir//Aluminium+Center,+CWHC%2BH37,+Basavanahalli,+Karnataka+571234/@12.428938,75.920188,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba5a700360c1f89:0xe00eaae4a816dbb3!2m2!1d75.920188!2d12.428938",
 
   // Leave blank ("") to hide a social link in the footer
   social: {
-    instagram: "https://www.instagram.com/aluminium.center/?utm_source=ig_web_button_share_sheet",
+    instagram:
+      "https://www.instagram.com/aluminium.center/?utm_source=ig_web_button_share_sheet",
     facebook: "",
     pinterest: "",
   },
@@ -69,12 +72,30 @@ export const heroSlides = [
 ];
 
 export const whyPoints = [
-  { title: "Custom Designed", text: "Every layout is planned around your room, not the other way around." },
-  { title: "Precision Crafted", text: "Profiles, joints, and panels fabricated to tight, consistent tolerances." },
-  { title: "Space Efficient", text: "Storage and structure designed to make the most of the space available." },
-  { title: "Professional Installation", text: "Fitted on site by our own team, finished to sit flush and true." },
-  { title: "Contemporary Finishing", text: "Clean profiles and restrained hardware for a considered, modern look." },
-  { title: "Built for Everyday Use", text: "Materials and mechanisms chosen to hold up to daily, real-world use." },
+  {
+    title: "Custom Designed",
+    text: "Every layout is planned around your room, not the other way around.",
+  },
+  {
+    title: "Precision Crafted",
+    text: "Profiles, joints, and panels fabricated to tight, consistent tolerances.",
+  },
+  {
+    title: "Space Efficient",
+    text: "Storage and structure designed to make the most of the space available.",
+  },
+  {
+    title: "Professional Installation",
+    text: "Fitted on site by our own team, finished to sit flush and true.",
+  },
+  {
+    title: "Contemporary Finishing",
+    text: "Clean profiles and restrained hardware for a considered, modern look.",
+  },
+  {
+    title: "Built for Everyday Use",
+    text: "Materials and mechanisms chosen to hold up to daily, real-world use.",
+  },
 ];
 
 export const processSteps = [

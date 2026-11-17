@@ -5,11 +5,17 @@ import { images } from "../data/images.js";
 
 export default function FeaturedWork() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
   const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   return (
-    <section ref={ref} className="relative h-[85vh] min-h-[560px] overflow-hidden">
+    <section
+      ref={ref}
+      className="relative h-[85vh] min-h-[560px] overflow-hidden"
+    >
       <motion.div style={{ y }} className="absolute inset-0 -top-[6%] h-[112%]">
         <SmartImage
           src={images.featured}
@@ -29,7 +35,9 @@ export default function FeaturedWork() {
           className="max-w-xl"
         >
           <span className="eyebrow mb-5 block">Featured Project</span>
-          <h2 className="text-[clamp(2rem,4.4vw,3.6rem)] leading-[1.08] text-cream">Made to measure.</h2>
+          <h2 className="text-[clamp(2rem,4.4vw,3.6rem)] leading-[1.08] text-cream">
+            Made to measure.
+          </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-cream-60 sm:text-base">
             Every project begins with the space itself.
           </p>

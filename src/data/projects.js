@@ -10,8 +10,6 @@ export const categories = [
   "Partitions",
   "Doors & Windows",
   "Custom Interiors",
-  
-  
 ];
 
 export const projects = [
@@ -20,7 +18,8 @@ export const projects = [
     title: "Cabin",
     category: "Cabinets",
     // location: "[PROJECT LOCATION]",
-    description: "A washroom cabinet with a floating design and concealed storage.",
+    description:
+      "A washroom cabinet with a floating design and concealed storage.",
     image: images.works[0],
     alt: "Luxury custom washroom cabinet",
   },
@@ -29,7 +28,8 @@ export const projects = [
     title: "Open-Plan Kitchen",
     category: "Kitchens",
     // location: "[PROJECT LOCATION]",
-    description: "A modular aluminium kitchen designed for an open living and dining space.",
+    description:
+      "A modular aluminium kitchen designed for an open living and dining space.",
     image: images.works[1],
     alt: "Modern custom aluminium kitchen in an open-plan home",
   },
@@ -38,8 +38,9 @@ export const projects = [
     title: "Open-Plan Kitchen",
     category: "Kitchens",
     // location: "[PROJECT LOCATION]",
-    description: "A modular aluminium kitchen designed for an open living and dining space.",
- image: images.works[2],
+    description:
+      "A modular aluminium kitchen designed for an open living and dining space.",
+    image: images.works[2],
     alt: "Modern custom aluminium kitchen in an open-plan home",
   },
   {
@@ -47,7 +48,8 @@ export const projects = [
     title: "Showcase",
     category: "TV Units",
     // location: "[PROJECT LOCATION]",
-    description: "A tailored television unit with integrated storage and modern aesthetics.",
+    description:
+      "A tailored television unit with integrated storage and modern aesthetics.",
     image: images.works[3],
     alt: "Aluminium-framed tv unit",
   },
@@ -56,7 +58,8 @@ export const projects = [
     title: "Wall Panneling",
     category: "TV Units",
     // location: "[PROJECT LOCATION]",
-    description: "A tailored television unit with integrated storage and modern aesthetics.",
+    description:
+      "A tailored television unit with integrated storage and modern aesthetics.",
     image: images.works[4],
     alt: "Aluminium-framed tv unit",
   },
@@ -65,7 +68,8 @@ export const projects = [
     title: "Windows",
     category: "Doors & Windows",
     // location: "[PROJECT LOCATION]",
-    description: "A window with a modern aluminium frame and energy-efficient glazing.",
+    description:
+      "A window with a modern aluminium frame and energy-efficient glazing.",
     image: images.works[5],
     alt: "Custom aluminium windows in a residential setting",
   },
@@ -83,13 +87,14 @@ export const projects = [
     title: "Windows",
     category: "Doors & Windows",
     // location: "[PROJECT LOCATION]",
-    description: "A window with a modern aluminium frame and energy-efficient glazing.",
+    description:
+      "A window with a modern aluminium frame and energy-efficient glazing.",
     image: images.works[7],
     alt: "Custom aluminium windows in a residential setting",
   },
   {
     id: "project-09",
-    title:"Wardrobe",
+    title: "Wardrobe",
     category: "Wardrobes",
     // location: "[PROJECT LOCATION]",
     description: "A sleek wardrobe with sliding doors and integrated lighting.",
@@ -97,34 +102,36 @@ export const projects = [
     alt: "Modern custom wardrobe with sliding doors",
   },
   {
-  id: "project-10",
-  title: "Interior Design",
-  category: "Custom Interiors",
-  description: "Custom interior design solutions for a clean and efficient workspace.",
-  image: images.works[9],
-  alt: "Custom interior design solutions for a clean and efficient workspace ",
-},
-{
-  id: "project-11",
-   title: "Interior Design",
-  category: "Custom Interiors",
-  description: "Custom interior design solutions for a clean and efficient workspace.",
-  image: images.works[10],
-  alt: "Custom interior design solutions for a clean and efficient workspace ",
-
-},
+    id: "project-10",
+    title: "Interior Design",
+    category: "Custom Interiors",
+    description:
+      "Custom interior design solutions for a clean and efficient workspace.",
+    image: images.works[9],
+    alt: "Custom interior design solutions for a clean and efficient workspace ",
+  },
+  {
+    id: "project-11",
+    title: "Interior Design",
+    category: "Custom Interiors",
+    description:
+      "Custom interior design solutions for a clean and efficient workspace.",
+    image: images.works[10],
+    alt: "Custom interior design solutions for a clean and efficient workspace ",
+  },
   {
     id: "project-12",
     title: "Cabin",
     category: "Cabinets",
     // location: "[PROJECT LOCATION]",
-    description: "A washroom cabinet with a floating design and concealed storage.",
+    description:
+      "A washroom cabinet with a floating design and concealed storage.",
     image: images.works[11],
     alt: "Luxury custom washroom cabinet",
   },
   {
     id: "project-13",
-    title:"Wardrobe",
+    title: "Wardrobe",
     category: "Wardrobes",
     // location: "[PROJECT LOCATION]",
     description: "A sleek wardrobe with sliding doors and integrated lighting.",
@@ -132,20 +139,21 @@ export const projects = [
     alt: "Modern custom wardrobe with sliding doors",
   },
   {
-     id: "project-14",
+    id: "project-14",
     title: "Custom design",
     category: "Partitions",
     // location: "[PROJECT LOCATION]",
     description: "A custom partition with a modern aluminium finish.",
     image: images.works[13],
-    alt: "Custom aluminium partitions in a residential setting", },
+    alt: "Custom aluminium partitions in a residential setting",
+  },
   {
     id: "project-15",
     title: "Interior Design",
     category: "Custom Interiors",
-    description: "Custom interior design solutions for a clean and efficient workspace.",
+    description:
+      "Custom interior design solutions for a clean and efficient workspace.",
     image: images.works[14],
     alt: "Custom interior design solutions for a clean and efficient workspace ",
   },
-
 ];

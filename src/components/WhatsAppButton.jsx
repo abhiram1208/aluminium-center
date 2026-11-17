@@ -1,15 +1,14 @@
-import { business } from "../data/siteData.js";
-
 export default function WhatsAppButton() {
-  const number = (import.meta.env.VITE_WHATSAPP_NUMBER || "").replace(/[^\d]/g, "");
+  const number = (import.meta.env.VITE_WHATSAPP_NUMBER || "").replace(
+    /[^\d]/g,
+    "",
+  );
 
-const message = encodeURIComponent(
-  "Hi, I'd like to ask about a custom aluminium project."
-);
+  const message = encodeURIComponent(
+    "Hi, I'd like to ask about a custom aluminium project.",
+  );
 
-const href = number
-  ? `https://wa.me/${number}?text=${message}`
-  : "#contact";
+  const href = number ? `https://wa.me/${number}?text=${message}` : "#contact";
 
   return (
     <a

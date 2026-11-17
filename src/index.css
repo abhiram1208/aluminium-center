@@ -23,13 +23,16 @@
     font-feature-settings: "ss01" 1;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-serif font-normal;
     letter-spacing: -0.01em;
   }
 
   ::selection {
-    background: #C9A876;
+    background: #c9a876;
     color: #060606;
   }
 
@@ -38,7 +41,7 @@
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    outline: 1.5px solid #C9A876;
+    outline: 1.5px solid #c9a876;
     outline-offset: 3px;
   }
 }
@@ -79,4 +82,108 @@
 ::-webkit-scrollbar-thumb {
   background: #232323;
   border: 2px solid #060606;
+}
+
+.snowball-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.intro-snowball {
+  position: absolute;
+  top: -40px;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #ffffff, #dce8ff 55%, #9aafd8);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  animation: snowballEdgeFall 2.5s ease-in forwards;
+}
+
+.left-snow {
+  left: 0;
+  margin-left: 12px;
+}
+
+.right-snow {
+  right: 0;
+  margin-right: 12px;
+}
+
+/* Opening snowball animation */
+.snowball-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.intro-snowball {
+  position: absolute;
+  top: -40px;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #ffffff, #dce8ff 55%, #9aafd8);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  animation-name: snowballEdgeFall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.left-snow {
+  left: 12px;
+}
+
+.right-snow {
+  right: 12px;
+}
+
+@keyframes snowballEdgeFall {
+  0% {
+    transform: translate(0, -10vh) scale(0.6);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate(8px, 80vh) scale(1);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(4px, 75vh) scale(0.85);
+  }
+
+  100% {
+    transform: translate(0, 110vh) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .left-snow {
+    left: 4px;
+  }
+
+  .right-snow {
+    right: 4px;
+  }
+
+  .intro-snowball {
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .snowball-intro {
+    display: none;
+  }
 }

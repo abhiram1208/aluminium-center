@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
 import { images } from "../data/images.js";
 import { heroSlides } from "../data/siteData.js";
 
@@ -28,7 +34,9 @@ function usePrefersReducedMotion() {
 }
 
 function activeSlideIndex(progress) {
-  const idx = heroSlides.findIndex((s) => progress >= s.range[0] && progress < s.range[1]);
+  const idx = heroSlides.findIndex(
+    (s) => progress >= s.range[0] && progress < s.range[1],
+  );
   if (idx !== -1) return idx;
   return progress >= 1 ? heroSlides.length - 1 : 0;
 }
@@ -92,7 +100,9 @@ export default function Hero() {
 
         // Snap once the gap is imperceptible so it settles instead of
         // drifting forever in tiny fractions.
-        if (Math.abs(targetProgress.current - smoothedProgress.current) < 0.0005) {
+        if (
+          Math.abs(targetProgress.current - smoothedProgress.current) < 0.0005
+        ) {
           smoothedProgress.current = targetProgress.current;
         }
 
@@ -179,7 +189,9 @@ export default function Hero() {
             style={{ opacity: scrollHint }}
             className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex"
           >
-            <span className="text-[10px] uppercase tracking-widest2 text-cream-40">Scroll</span>
+            <span className="text-[10px] uppercase tracking-widest2 text-cream-40">
+              Scroll
+            </span>
             <span className="h-8 w-px bg-cream/25" />
           </motion.div>
         )}
