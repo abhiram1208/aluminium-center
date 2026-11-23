@@ -3,8 +3,12 @@ export default function Logo({ className = "" }) {
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <span className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
         <img
-          src="/images/brand/logo.jpg"
+          src="/images/brand/logo.webp"
           alt="Aluminium Center"
+          loading="eager"
+          decoding="async"
+          width="32"
+          height="32"
           className="block h-full w-full object-contain"
         />
       </span>

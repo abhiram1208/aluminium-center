@@ -28,14 +28,21 @@ export default function ShopGallery() {
             src={large}
             alt="Aluminium Center showroom interior"
             label={captions[0]}
+            loading="lazy"
+            decoding="async"
+            sizes="(max-width: 1023px) 100vw, 66vw"
             className="col-span-2 aspect-[4/3] lg:col-span-4 lg:row-span-2 lg:aspect-auto"
           />
+
           {rest.map((src, i) => (
             <SmartImage
-              key={src}
+              key={src.src || src}
               src={src}
               alt={`Aluminium Center — ${captions[i + 1]}`}
               label={captions[i + 1]}
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 1023px) 50vw, 33vw"
               className="aspect-square lg:col-span-2"
             />
           ))}

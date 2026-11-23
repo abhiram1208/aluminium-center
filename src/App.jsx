@@ -5,7 +5,6 @@ import ShopGallery from "./components/ShopGallery.jsx";
 import Services from "./components/Services.jsx";
 import Process from "./components/Process.jsx";
 import Works from "./components/Works.jsx";
-import FeaturedWork from "./components/FeaturedWork.jsx";
 import InAssociation from "./components/InAssociation.jsx";
 import WhyChooseUs from "./components/WhyChooseUs.jsx";
 import Contact from "./components/Contact.jsx";
@@ -13,8 +12,7 @@ import Location from "./components/Location.jsx";
 import FinalCTA from "./components/FinalCTA.jsx";
 import Footer from "./components/Footer.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
-import { Snowfall } from "falling-snow/react";
-
+import Snowfall from "react-snowfall";
 import { useEffect, useState } from "react";
 
 function SnowballIntro() {
@@ -72,8 +70,8 @@ export default function App() {
         }}
       />
 
-      {/* Keep the rest of your existing components unchanged */}
       <Navbar />
+
       <main>
         <Hero />
         <About />
@@ -81,34 +79,15 @@ export default function App() {
         <Services />
         <Process />
         <Works />
-        {/* <FeaturedWork /> */}
         <InAssociation />
         <WhyChooseUs />
         <Contact />
         <Location />
         <FinalCTA />
       </main>
+
       <Footer />
       <WhatsAppButton />
-      {/* <Snowfall
-        snowflakeCount={50}
-        color="#ffffff"
-        radius={[1, 4]}
-        speed={[0.5, 2]}
-        wind={[-0.5, 1]}
-        rotationSpeed={[-1, 1]}
-        enable3DRotation
-        opacity={[0.6, 1]}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 450,
-          width: "90vw",
-          height: "90vh",
-          zIndex: 9999,
-          pointerEvents: "none",
-        }}
-      /> */}
     </div>
   );
 }

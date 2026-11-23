@@ -1,26 +1,9 @@
-import { motion } from "framer-motion";
-import SmartImage from "./SmartImage.jsx";
-import { images } from "../data/images.js";
-
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden">
-      <SmartImage
-        src={images.cta}
-        alt="Cinematic premium interior scene representing custom aluminium design"
-        label="final-cta.webp"
-        className="absolute inset-0 h-full w-full"
-      />
-      <div className="absolute inset-0 bg-ink/70" />
-
-      <div className="section-pad relative z-10 flex min-h-[70vh] flex-col items-center justify-center py-28 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-2xl"
-        >
+    <section className="relative overflow-hidden bg-surface">
+      <div className="absolute inset-0 bg-gradient-to-br from-champagne/10 via-transparent to-ink/80" />
+      <div className="section-pad relative z-10 flex min-h-[420px] flex-col items-center justify-center py-24 text-center sm:min-h-[520px] lg:min-h-[600px]">
+        <div className="mx-auto max-w-2xl">
           <h2 className="text-[clamp(2.1rem,4.6vw,3.8rem)] leading-[1.1] text-cream">
             Your space. Your dimensions. Your design.
           </h2>
@@ -35,7 +18,7 @@ export default function FinalCTA() {
               Chat on WhatsApp
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

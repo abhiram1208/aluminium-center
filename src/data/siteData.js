@@ -43,34 +43,6 @@ export const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const heroSlides = [
-  {
-    range: [0, 0.2],
-    label: "Aluminium Center",
-    headline: "Designed to belong.",
-    body: "Contemporary interiors, precisely crafted around your space.",
-  },
-  {
-    range: [0.2, 0.45],
-    label: null,
-    headline: "Every line has a purpose.",
-    body: "Precision profiles, seamless surfaces, and carefully considered details come together as one.",
-  },
-  {
-    range: [0.45, 0.75],
-    label: null,
-    headline: "Built around precision.",
-    body: "Every component is engineered for strength, alignment, and lasting performance.",
-  },
-  {
-    range: [0.75, 1.0],
-    label: null,
-    headline: "Crafted for your space.",
-    body: "Custom interiors, built around the way you live.",
-    cta: true,
-  },
-];
-
 export const whyPoints = [
   {
     title: "Custom Designed",

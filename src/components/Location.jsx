@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, ArrowUpRight } from "lucide-react";
 import { business } from "../data/siteData.js";
 
@@ -15,13 +14,7 @@ export default function Location() {
         </h2>
 
         <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="order-2 flex flex-col gap-7 lg:order-1 lg:col-span-4"
-          >
+          <div className="order-2 flex flex-col gap-7 lg:order-1 lg:col-span-4">
             <div className="flex gap-4">
               <MapPin size={18} className="mt-1 shrink-0 text-champagne" />
               <div>
@@ -84,15 +77,9 @@ export default function Location() {
             >
               Get Directions <ArrowUpRight size={15} />
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="order-1 aspect-[4/3] w-full overflow-hidden bg-panel sm:aspect-[16/9] lg:order-2 lg:col-span-8"
-          >
+          <div className="order-1 aspect-[4/3] w-full overflow-hidden bg-panel sm:aspect-[16/9] lg:order-2 lg:col-span-8">
             {hasMap ? (
               <iframe
                 title="Aluminium Center location"
@@ -109,7 +96,7 @@ export default function Location() {
                 </span>
               </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import SmartImage from "./SmartImage.jsx";
 import { images } from "../data/images.js";
 
@@ -14,13 +13,7 @@ export default function About() {
     <section id="about" className="section-pad py-28 lg:py-36">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-5">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col gap-7 lg:sticky lg:top-32"
-          >
+          <div className="flex flex-col gap-7 lg:sticky lg:top-32">
             <span className="eyebrow">About Aluminium Center</span>
             <h2 className="text-[clamp(2rem,3.6vw,3.2rem)] leading-[1.1] text-cream">
               Built around better spaces.
@@ -50,27 +43,23 @@ export default function About() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         <div className="lg:col-span-7">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="grid grid-cols-2 gap-4"
-          >
+          <div className="grid grid-cols-2 gap-4">
             <SmartImage
               src={images.about.main}
               alt="Sophisticated contemporary interior with a premium custom aluminium wardrobe"
               label="about-main.webp"
+              sizes="(max-width: 1023px) 100vw, 58vw"
               className="col-span-2 aspect-[4/3] sm:aspect-[13/11]"
             />
             <SmartImage
               src={images.about.detail}
               alt="Macro detail of an aluminium profile, panel junction, and handle"
               label="about-detail.webp"
+              sizes="(max-width: 639px) 100vw, 29vw"
               className="col-span-2 aspect-[3/2] sm:col-span-1"
             />
             <div className="hidden aspect-[3/2] flex-col justify-between border border-hairline p-6 sm:col-span-1 sm:flex">
@@ -79,7 +68,7 @@ export default function About() {
                 Precision, by hand and by design.
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
