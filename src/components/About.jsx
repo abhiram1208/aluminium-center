@@ -10,14 +10,17 @@ const points = [
 
 export default function About() {
   return (
-    <section id="about" className="section-pad py-28 lg:py-36">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-10">
+    <section id="about" className="section-pad py-12 lg:py-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
+        {/* About content */}
         <div className="lg:col-span-5">
-          <div className="flex flex-col gap-7 lg:sticky lg:top-32">
+          <div className="flex flex-col gap-6 lg:sticky lg:top-28">
             <span className="eyebrow">About Aluminium Center</span>
+
             <h2 className="text-[clamp(2rem,3.6vw,3.2rem)] leading-[1.1] text-cream">
               Built around better spaces.
             </h2>
+
             <p className="max-w-md text-[15px] leading-relaxed text-cream-60">
               Aluminium Center is a modern custom aluminium interior and
               fabrication brand. We design and build practical, contemporary,
@@ -25,6 +28,7 @@ export default function About() {
               cabinets, partitions, doors, and windows — shaped around the way
               each space is actually used.
             </p>
+
             <p className="max-w-md text-[15px] leading-relaxed text-cream-60">
               From the first measurement to the final fitting, every project is
               treated as its own piece of architecture: designed with intent,
@@ -32,39 +36,44 @@ export default function About() {
               smallest detail.
             </p>
 
-            <ul className="mt-2 flex flex-col gap-4">
-              {points.map((p) => (
+            <ul className="flex flex-col gap-4">
+              {points.map((point) => (
                 <li
-                  key={p}
+                  key={point}
                   className="flex items-start gap-3 text-sm text-cream-60"
                 >
                   <span className="mt-2 h-px w-4 shrink-0 bg-champagne" />
-                  {p}
+                  {point}
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="lg:col-span-7">
-          <div className="grid grid-cols-2 gap-4">
+        {/* Images */}
+        <div className="min-w-0 lg:col-span-7">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <SmartImage
               src={images.about.main}
-              alt="Sophisticated contemporary interior with a premium custom aluminium wardrobe"
+              alt="Premium aluminium interior"
               label="about-main.webp"
               sizes="(max-width: 1023px) 100vw, 58vw"
-              className="col-span-2 aspect-[4/3] sm:aspect-[13/11]"
+              className="sm:col-span-2"
+              imgClassName="!h-auto object-contain"
             />
+
             <SmartImage
               src={images.about.detail}
-              alt="Macro detail of an aluminium profile, panel junction, and handle"
+              alt="Aluminium profile and handle detail"
               label="about-detail.webp"
               sizes="(max-width: 639px) 100vw, 29vw"
-              className="col-span-2 aspect-[3/2] sm:col-span-1"
+              className="aspect-[3/2]"
             />
-            <div className="hidden aspect-[3/2] flex-col justify-between border border-hairline p-6 sm:col-span-1 sm:flex">
+
+            <div className="hidden aspect-[3/2] flex-col justify-between border border-hairline p-5 sm:flex sm:p-6">
+              {" "}
               <span className="eyebrow">Since 2026</span>
-              <span className="font-serif text-2xl text-cream">
+              <span className="font-serif text-xl text-cream sm:text-2xl">
                 Precision, by hand and by design.
               </span>
             </div>

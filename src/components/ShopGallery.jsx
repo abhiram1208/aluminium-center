@@ -15,7 +15,7 @@ export default function ShopGallery() {
   const [large, ...rest] = images.shop;
 
   return (
-    <section className="section-pad py-28 lg:py-36">
+    <section className="section-pad py-10 lg:py-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="The Showroom"

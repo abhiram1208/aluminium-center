@@ -134,7 +134,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-pad py-28 lg:py-36">
+    <section id="contact" className="section-pad py-10 lg:py-10">
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-10">
         {/* LEFT SIDE */}
         <div className="lg:col-span-5">

@@ -12,7 +12,7 @@ export default function Works() {
       : projects.filter((project) => project.category === active);
 
   return (
-    <section id="works" className="section-pad py-28 lg:py-36">
+    <section id="works" className="section-pad py-10 lg:py-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
           <SectionHeading eyebrow="Portfolio" title="Selected Works." />

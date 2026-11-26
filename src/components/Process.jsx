@@ -3,7 +3,7 @@ import { processSteps } from "../data/siteData.js";
 
 export default function Process() {
   return (
-    <section className="section-pad py-28 lg:py-36">
+    <section className="section-pad py-10 lg:py-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading eyebrow="Process" title="From idea to installation." />
 

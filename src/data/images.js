@@ -22,12 +22,12 @@ export const images = {
   },
   about: {
     main: image(
-      "/images/shop/shop-02.webp",
+      "/images/brand/logo.webp",
       "Aluminium Center showroom interior",
       false,
-      "/images/shop/shop-02-480.webp 480w, /images/shop/shop-02-800.webp 800w, /images/shop/shop-02-1200.webp 1200w, /images/shop/shop-02.webp 1280w",
-      1280,
-      960,
+      "/images/brand/logo-480.webp 480w, /images/brand/logo-800.webp 800w, /images/brand/logo.webp 1200w",
+      1200,
+      1200,
     ),
     detail: image(
       "/images/about/about-detail.webp",
